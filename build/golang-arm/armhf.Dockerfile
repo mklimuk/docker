@@ -5,7 +5,7 @@ RUN printf '%s\n' 'path-exclude /usr/share/doc/*' 'path-include /usr/share/doc/*
     echo "deb http://emdebian.org/tools/debian/ jessie main" > /etc/apt/sources.list.d/crosstools.list && \
     curl http://emdebian.org/tools/debian/emdebian-toolchain-archive.key | apt-key add - && \
     dpkg --add-architecture armhf && apt-get update && export DEBIAN_FRONTEND=noninteractive && \
-    apt-get install -yq crossbuild-essential-armhf libasound2-dev:armhf webkit2gtk-4.0-dev:armhf javascriptcoregtk-3.0-dev:armhf gir1.2-webkit2-4.0:armhf libgtk-3-dev:armhf libsoup2.4-dev:armhf gir1.2-gtk-3.0:armhf gir1.2-soup-2.4:armhf libgdk-pixbuf2.0-dev:armhf libatk1.0-dev:armhf libatk-bridge2.0-dev:armhf gir1.2-atk-1.0:armhf gir1.2-gdkpixbuf-2.0:armhf libatspi2.0-dev:armhf libglib2.0-dev:armhf
+    apt-get install -yq fakeroot crossbuild-essential-armhf libasound2-dev:armhf webkit2gtk-4.0-dev:armhf javascriptcoregtk-3.0-dev:armhf gir1.2-webkit2-4.0:armhf libgtk-3-dev:armhf libsoup2.4-dev:armhf gir1.2-gtk-3.0:armhf gir1.2-soup-2.4:armhf libgdk-pixbuf2.0-dev:armhf libatk1.0-dev:armhf libatk-bridge2.0-dev:armhf gir1.2-atk-1.0:armhf gir1.2-gdkpixbuf-2.0:armhf libatspi2.0-dev:armhf libglib2.0-dev:armhf
 
 ENV PKG_CONFIG_PATH=/usr/lib/arm-linux-gnueabihf/pkgconfig
 
