@@ -1,0 +1,3 @@
+[submodule "build/golang-arm/rpi"]
+	path = build/golang-arm/rpi
+	url = git@github.com:mklimuk/rpi.git
