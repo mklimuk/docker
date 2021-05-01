@@ -5,7 +5,7 @@ RUN printf '%s\n' 'path-exclude /usr/share/doc/*' 'path-include /usr/share/doc/*
     apt-get install -yq fakeroot crossbuild-essential-armhf libasound2-dev:armhf
 
 # install mage
-RUN pushd /go/bin && wget https://github.com/magefile/mage/releases/download/v1.11.0/mage_1.11.0_Linux-64bit.tar.gz -O - | tar -xz && popd && mage --version
+RUN pushd /go/bin && wget https://github.com/magefile/mage/releases/download/v1.11.0/mage_1.11.0_Linux-ARM.tar.gz -O - | tar -xz && popd && mage --version
 
 ENV PKG_CONFIG_PATH=/usr/lib/arm-linux-gnueabihf/pkgconfig
 
