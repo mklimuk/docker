@@ -7,5 +7,5 @@ RUN printf '%s\n' 'path-exclude /usr/share/doc/*' 'path-include /usr/share/doc/*
     apt-get install -yq git-core fakeroot build-essential libasound2-dev
 
 # install mage
-RUN pushd /go/bin && wget https://github.com/magefile/mage/releases/download/v1.11.0/mage_1.11.0_Linux-64bit.tar.gz -O - | tar -xz && popd && mage --version
+RUN cd /go/bin && wget https://github.com/magefile/mage/releases/download/v1.11.0/mage_1.11.0_Linux-64bit.tar.gz -O - | tar -xz && cd /go && mage --version
 
